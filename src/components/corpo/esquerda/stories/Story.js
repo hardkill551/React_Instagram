@@ -1,19 +1,7 @@
 import Imagem from "./Imagem";
-import Usuario from "./Usuario";
+import User from "./User";
 import Setinha from "./Setinha";
-
-const story=[
-    {user:"9gag", img:"assets/img/9gag.svg"},
-    {user:"meowed", img:"assets/img/meowed.svg"},
-    {user:"barked", img:"assets/img/barked.svg"},
-    {user:"nathanwpylestrangeplanet", img:"assets/img/nathanwpylestrangeplanet.svg"},
-    {user:"wawawicomics", img:"assets/img/wawawicomics.svg"},
-    {user:"respondeai", img:"assets/img/respondeai.svg"},
-    {user:"filomoderna", img:"assets/img/filomoderna.svg"},
-    {user:"memeriagourmet", img:"assets/img/memeriagourmet.svg"}
-    ]
-    
-
+import story from "./arrayStories";
 
 export default function Story(){
     return (
@@ -21,7 +9,7 @@ export default function Story(){
         {story.map(objeto => {
         return <div class="story">
         <Imagem img={objeto.img} alt={objeto.user}/>
-        <Usuario user={objeto.user} />
+        <User user={objeto.user} />
         </div>
         }
         )}
