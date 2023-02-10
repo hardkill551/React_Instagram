@@ -4,7 +4,7 @@ import Story from "./stories/Story";
 
 export default function Esquerda(){
     return (
-        <div class="esquerda">
+        <div className="esquerda">
         <Story />
         <Posts />
         </div>

@@ -1,11 +1,12 @@
 export default function Usuario(props) {
+    
     return (
-        <div class="topo">
-            <div class="usuario">
+        <div className="topo">
+            <div className="usuario">
                 <img src={props.imagem} alt={props.usuario} />
                 {props.usuario}
             </div>
-            <div class="acoes">
+            <div className="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
         </div>

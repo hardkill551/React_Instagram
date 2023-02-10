@@ -5,7 +5,7 @@ import Icones_mobile from "./Icones_mobile"
 
 export default function Container(){
     return (
-    <div class="container">
+    <div className="container">
         <Logo />
         <Pesquisa />
         <Icones />

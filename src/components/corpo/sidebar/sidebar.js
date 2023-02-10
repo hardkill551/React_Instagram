@@ -3,13 +3,16 @@ import Links from "./links";
 import Sugestoes from "./sugestoes/sugestoes";
 import UsuarioPrincipal from "./usuarioPrincipal";
 
+
 export default function Sidebar(){
+  
     return (
-        <div class="sidebar">
-        <UsuarioPrincipal usuario={"catanacomics"}/>
+        <div className="sidebar">
+        <UsuarioPrincipal key={"catanacomics"} usuario={"catanacomics"} imagem={"assets/img/catanacomics.svg"}/>
         <Sugestoes />
         <Links />
         <Copyright />
       </div>
     )
 }
+
