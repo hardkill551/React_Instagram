@@ -18,13 +18,13 @@ export default function Conteudo(props) {
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
           <div>
-            <ion-icon onClick={() => setPreencher(preencherSalvar(preencher))}data-test="likes-number" name={`bookmark${preencher==false ? "-outline" : ""}`}></ion-icon>
+            <ion-icon data-test="save-post" onClick={() => setPreencher(preencherSalvar(preencher))} name={`bookmark${preencher==false ? "-outline" : ""}`}></ion-icon>
           </div>
         </div>
         <div className="curtidas">
           <img src={props.imageCurtidas} alt={props.nomeCurtidas}/>
-          <div data-test="save-post" className="texto">
-            Curtido por <strong>{props.nomeCurtidas}</strong> e <strong>outras {curtidas} pessoas</strong>
+          <div className="texto">
+            Curtido por <strong>{props.nomeCurtidas}</strong> e <strong data-test="likes-number">outras {curtidas} pessoas</strong>
           </div>
         </div>
       </div>
