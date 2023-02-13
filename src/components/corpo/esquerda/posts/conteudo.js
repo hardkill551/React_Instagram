@@ -3,12 +3,14 @@ import { useState } from "react"
 export default function Conteudo(props) {
   const [curtidas, setCurtidas] = useState(101)
   const [preencher, setPreencher] = useState(false)
+  const [heart, setHeart] = useState(false)
   const x = 101
   
     return (
       <>
       <div className="conteudo">
-      <img data-test="post-image" onDoubleClick={() => setCurtidas(adicionarCurtida(curtidas, x))} src={props.imagePost} alt={props.nomeImagem}/>
+      <img data-test="post-image" onDoubleClick={() => setCurtidas(adicionarCurtida(curtidas, x, heart, setHeart))} src={props.imagePost} alt={props.nomeImagem}/>
+      <ion-icon data-test="like-post" class={`${heart ? "animacao animacao1" : "animacao"}`} name="heart"></ion-icon>
       </div>
         <div className="fundo">
         <div className="acoes"> 
@@ -40,11 +42,19 @@ function adicionarCurtidas(curtidas, x){
   return curtidas-1
 }
 
-function adicionarCurtida(curtidas, x){    
+function adicionarCurtida(curtidas, x, heart, setHeart){    
   console.log(curtidas)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   if(x+1==curtidas){
+    setHeart(heart=true)
+    setTimeout(function() {
+      setHeart(heart=false)
+    }, 500)
     return curtidas
   }
+  setHeart(heart=true)
+  setTimeout(function() {
+    setHeart(heart=false)
+  }, 500)
   return curtidas+1
 }
 

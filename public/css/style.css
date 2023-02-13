@@ -178,6 +178,7 @@ body {
 
 .post .conteudo img {
   width: 100%;
+  
 }
 
 .post .fundo .acoes {
@@ -307,5 +308,23 @@ ion-icon {
 
 .vermelho{
   color: red;
+}
+
+.animacao {
+  position: absolute;
+  left: 250px;
+  top: 250px;
+  font-size: 125px;
+  transform: scale(0);
+  color: white;
+  
+}
+.animacao1 {
+  transition: all 300ms;
+  transform: scale(1);
+}
+
+.post .conteudo{
+  position: relative;
 }
 
