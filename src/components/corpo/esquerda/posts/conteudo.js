@@ -10,7 +10,7 @@ export default function Conteudo(props) {
       <>
       <div className="conteudo">
       <img data-test="post-image" onDoubleClick={() => setCurtidas(adicionarCurtida(curtidas, x, heart, setHeart))} src={props.imagePost} alt={props.nomeImagem}/>
-      <ion-icon data-test="like-post" class={`${heart ? "animacao animacao1" : "animacao"}`} name="heart"></ion-icon>
+      <ion-icon class={`${heart ? "animacao animacao1" : "animacao"}`} name="heart"></ion-icon>
       </div>
         <div className="fundo">
         <div className="acoes"> 
